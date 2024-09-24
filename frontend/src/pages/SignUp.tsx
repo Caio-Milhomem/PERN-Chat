@@ -1,6 +1,26 @@
 import { Link } from "react-router-dom";
 import "../App.css";
+import { useState } from "react";
+import GenderCheckbox from "../components/GenderCheckbox";
+
 const SignUp = () => {
+  const [inputs, setInputs] = useState({
+    fullName: "",
+    userName: "",
+    password: "",
+    confirmPassword: "",
+    gender: "",
+  });
+
+  const handleCheckboxChange = (gender: "male" | "female") => {
+    setInputs({ ...inputs, gender });
+  };
+
+  const handleSubmitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(inputs);
+  };
+
   return (
     <div>
       <div
@@ -12,6 +32,7 @@ const SignUp = () => {
         <form
           className="bg-light p-4 rounded shadow"
           style={{ width: "400px" }}
+          onSubmit={handleSubmitForm}
         >
           <h2 className="text-center mb-4 fw-bold">
             Sign Up <span>ChatApp</span>
@@ -25,6 +46,10 @@ const SignUp = () => {
               className="form-control"
               id="fullName"
               placeholder="Enter Full Name"
+              value={inputs.fullName}
+              onChange={(e) =>
+                setInputs({ ...inputs, fullName: e.target.value })
+              }
             />
           </div>
           <div className="mb-3">
@@ -36,6 +61,10 @@ const SignUp = () => {
               className="form-control"
               id="username"
               placeholder="Enter User Name"
+              value={inputs.userName}
+              onChange={(e) =>
+                setInputs({ ...inputs, userName: e.target.value })
+              }
             />
           </div>
           <div className="mb-3">
@@ -47,6 +76,10 @@ const SignUp = () => {
               className="form-control"
               id="password"
               placeholder="Enter Password"
+              value={inputs.password}
+              onChange={(e) =>
+                setInputs({ ...inputs, password: e.target.value })
+              }
             />
           </div>
           <div className="mb-3">
@@ -58,23 +91,18 @@ const SignUp = () => {
               className="form-control"
               id="confirmPassword"
               placeholder="Confirm Password"
+              value={inputs.confirmPassword}
+              onChange={(e) =>
+                setInputs({ ...inputs, confirmPassword: e.target.value })
+              }
             />
           </div>
-          <div className="mb-3">
-            <label className="form-label fw-bold">Gender</label>
-            <div>
-              <input type="radio" id="male" name="gender" value="male" />
-              <label htmlFor="male" className="ms-1">
-                Male
-              </label>
-            </div>
-            <div>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label htmlFor="female" className="ms-1">
-                Female
-              </label>
-            </div>
-          </div>
+
+          <GenderCheckbox
+            selectedGender={inputs.gender}
+            onCheckboxChange={handleCheckboxChange}
+          />
+
           <Link to={"/login"}>Already have a account ?</Link>
           <button type="submit" className="btn btn-primary w-100 mt-3">
             Sign Up
