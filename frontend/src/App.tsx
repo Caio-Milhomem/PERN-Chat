@@ -1,18 +1,30 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import { useAuthContext } from "./context/AuthContext";
 
 function App() {
+  const { authUser, isLoading } = useAuthContext();
+  if (isLoading) return null;
   return (
     <div
       className="min-vh-100"
-      style={{ backgroundColor: "	hsl(263, 88%, 10%)" }}
+      style={{ backgroundColor: "hsl(262, 61%, 17%)" }}
     >
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={authUser ? <Home /> : <Navigate to={"/login"} />}
+        />
+        <Route
+          path="/signup"
+          element={!authUser ? <SignUp /> : <Navigate to={"/"} />}
+        />
+        <Route
+          path="/login"
+          element={!authUser ? <Login /> : <Navigate to={"/"} />}
+        />
       </Routes>
     </div>
   );
