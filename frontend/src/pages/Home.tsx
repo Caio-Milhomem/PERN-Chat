@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <Sidebar />
-      <MessageContainer />
+      {/*<MessageContainer />*/}
     </div>
   );
 };
