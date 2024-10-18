@@ -11,7 +11,9 @@ function App() {
   return (
     <div
       className="min-vh-100"
-      style={{ backgroundColor: "hsl(262, 61%, 17%)" }}
+      style={{
+        background: "linear-gradient(to bottom, hsl(262, 61%, 25%), black)",
+      }}
     >
       <Routes>
         <Route
