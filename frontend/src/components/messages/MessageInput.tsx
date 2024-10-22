@@ -25,7 +25,11 @@ const MessageInput = () => {
         />
         <button type="submit" className="btn btn-primary">
           {loading ? (
-            <div className="spinner-border" role="status">
+            <div
+              className="spinner-border"
+              role="status"
+              style={{ width: "25px", height: "25px" }}
+            >
               <span className="visually-hidden">Loading...</span>
             </div>
           ) : (

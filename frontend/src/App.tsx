@@ -10,7 +10,6 @@ function App() {
   if (isLoading) return null;
   return (
     <div
-      className="min-vh-100"
       style={{
         background: "linear-gradient(to bottom, hsl(262, 61%, 25%), black)",
       }}

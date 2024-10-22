@@ -7,7 +7,7 @@ import Messages from "./Messages";
 const MessageContainer = () => {
   const { selectedConversation } = useConversation();
   return (
-    <div>
+    <div className="mb-2">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
@@ -27,7 +27,7 @@ export default MessageContainer;
 const NoChatSelected = () => {
   const { authUser } = useAuthContext();
   return (
-    <div>
+    <div className="" style={{ height: "400px" }}>
       <div>
         <p>Welcome {authUser?.fullName}</p>
         <p>Select a chat to start messaging</p>
