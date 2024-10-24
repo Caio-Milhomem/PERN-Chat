@@ -5,7 +5,10 @@ const Conversations = () => {
   const { conversations, loading } = useGetConversations();
   return (
     <div className="border-2 border-bottom border-top ps-2 py-1">
-      <div className="customScrollbar overflow-y-scroll overflow-x-hidden">
+      <div
+        className="customScrollbar overflow-y-scroll overflow-x-hidden"
+        style={{ maxHeight: "65vh" }}
+      >
         {conversations.map((conversation) => (
           <Conversation key={conversation.id} conversation={conversation} />
         ))}

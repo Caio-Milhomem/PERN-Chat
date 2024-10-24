@@ -16,6 +16,9 @@ adicionar separação de data das mensagens {
     foram enviadas.
 }
 
+modificar layout de mensagens {
+    se a última mensagens for da mesma pessoa da atual, não colocar foto de perfil novamente.
+}
 =============================================================================================================
 BEM FUTURAMENTE, UM DIA QUEM SABE
 

@@ -10,10 +10,10 @@ const Messages = () => {
   const ref = useChatScroll(messages) as React.MutableRefObject<HTMLDivElement>;
   return (
     <div
-      className="overflow-y-scroll overflow-x-hidden pe-2 customScrollbar"
+      className="overflow-y-scroll overflow-x-hidden pe-2 customScrollbar mb-1"
       ref={ref}
       style={{
-        maxHeight: "80vh",
+        maxHeight: "81vh",
       }}
     >
       {loading && (

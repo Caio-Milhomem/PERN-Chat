@@ -24,10 +24,8 @@ export const signup = async (req: Request, res: Response) => {
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(password, salt);
 
-    const boyProfilePic =
-      "https://avatar.iran.liara.run/public/boy?username=${userName}";
-    const girlProfilePic =
-      "https://avatar.iran.liara.run/public/girl?username=${userName}";
+    const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${userName}`;
+    const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${userName}`;
 
     const newUser = await prisma.user.create({
       data: {
