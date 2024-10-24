@@ -1,0 +1,36 @@
+adicionar mais opções de status { 
+    onde é isOnline vai virar status e ai tem que verificar qual o status e mudar a cor da bolinha
+    e algumas outras coisas como quando ocupado não fazer barulho de notificação.
+}
+
+adicionar alteração de dados {
+    poder alterar o nome de usuário (não o de login), a foto de perfil, som de notificação, cor do tema ? .
+}
+
+adicionar o visto na mensagem {
+    atualmente só tem o local hardcoded dizendo visto.
+}
+
+adicionar separação de data das mensagens {
+    mensagens mandadas em dias diferentes devem ficar separadas por uma linha indicando qual dia elas
+    foram enviadas.
+}
+
+=============================================================================================================
+BEM FUTURAMENTE, UM DIA QUEM SABE
+
+colocar IA dentro da parada{
+    pique wats
+}
+
+customização de interface {
+    que nem no wow que você pode colocar as coisas em qualquer lugar, terá alguns modelos de exemplo.
+}
+
+adicionar voz e vídeo {
+    na pegada do skype. 
+}
+
+adicionar scripts de texto{
+    pra quando for atender cliente não ter que ficar digitando bom dia.
+}

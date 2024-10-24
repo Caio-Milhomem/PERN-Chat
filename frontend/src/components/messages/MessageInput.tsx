@@ -14,11 +14,11 @@ const MessageInput = () => {
   };
 
   return (
-    <div className="mt-3">
+    <div className="mt-1">
       <form className="d-flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="form-control"
+          className="form-control text-break text-wrap"
           placeholder="Send a message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

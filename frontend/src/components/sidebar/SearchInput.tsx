@@ -26,7 +26,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="row">
+    <div className="row my-2">
       <form className="col" onSubmit={handleSubmit}>
         <div className="input-group">
           <input

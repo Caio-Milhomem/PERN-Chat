@@ -10,49 +10,75 @@ const Message = ({ message }: { message: MessageType }) => {
   const img = fromMe ? authUser?.profilePic : selectedConversation?.profilePic;
 
   return (
-    <div
-      className="rounded rounded-4 px-2 py-1 mb-1"
-      style={{ backgroundColor: "hsl(262, 61%, 10%)" }}
-    >
+    <div className="container">
       {fromMe ? (
-        <div className="row">
-          <div className="col">
-            <p className="text-light m-0">{message.body}</p>
+        <>
+          <div className="row  d-flex  justify-content-end">
+            <div
+              className="col-auto rounded rounded-4 me-1"
+              style={{
+                backgroundColor: "hsl(262, 61%, 100%)",
+                maxWidth: "80%",
+              }}
+            >
+              <p className="text-dark text-wrap text-break m-0">
+                {message.body}
+              </p>
+              <div className="text-end text-dark">
+                <span>{"<>"}</span>
+              </div>
+            </div>
+            <div
+              className="col-auto p-0 pt-1"
+              style={{ width: "40px", height: "40px" }}
+            >
+              <img
+                src={img}
+                alt="Profile"
+                className={`rounded-circle text-end`}
+                style={{ height: "40px" }}
+              />
+            </div>
           </div>
-          <div
-            className="col-auto p-0 me-2"
-            style={{ width: "40px", height: "40px" }}
-          >
-            <img
-              src={img}
-              alt="Profile"
-              className={`rounded-circle text-end`}
-              style={{ height: "40px" }}
-            />
+          <div className="row">
+            <span className="col text-end p-0">
+              {extractTime(message.createdAt)}
+            </span>
           </div>
-        </div>
+        </>
       ) : (
-        <div className="row">
-          <div
-            className="col-auto me-2"
-            style={{ width: "40px", height: "40px" }}
-          >
-            <img
-              src={img}
-              alt="Profile"
-              className={`rounded-circle text-end`}
-              style={{ height: "40px" }}
-            />
+        <>
+          <div className="row  d-flex  justify-content-start">
+            <div
+              className="col-auto p-0 pt-1"
+              style={{ width: "40px", height: "40px" }}
+            >
+              <img
+                src={img}
+                alt="Profile"
+                className={`rounded-circle text-end`}
+                style={{ height: "40px" }}
+              />
+            </div>
+            <div
+              className="col-auto rounded rounded-4 ms-1 pb-1 align-content-center"
+              style={{ backgroundColor: "hsl(0, 0%, 10%)" }}
+            >
+              <p
+                className="text-light text-wrap m-0"
+                style={{ maxWidth: "100px" }}
+              >
+                {message.body}
+              </p>
+            </div>
           </div>
-          <div className="col">
-            <p className="text-light m-0">{message.body}</p>
+          <div className="row">
+            <span className="col text-start p-0">
+              {extractTime(message.createdAt)}
+            </span>
           </div>
-        </div>
+        </>
       )}
-      <div className="row">
-        <span className="col text-start">{extractTime(message.createdAt)}</span>
-        <span className="col text-end">visto</span>
-      </div>
     </div>
   );
 };
