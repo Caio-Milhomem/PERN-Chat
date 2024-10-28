@@ -6,7 +6,7 @@ const LogedUser = () => {
 
   return (
     <div
-      className="row align-items-center p-1 m-0 border-2 border-bottom"
+      className="row align-items-center p-1 m-0 border-2 border-bottom flex-nowrap overflow-x-hidden"
       style={{
         maxWidth: "350px",
       }}
@@ -36,7 +36,9 @@ const LogedUser = () => {
         </div>
       </div>
       <div className="col">
-        <p className="mb-0 fs-4">{authUser?.fullName}</p>
+        <p className="mb-0 text-nowrap" style={{ fontSize: "4vh" }}>
+          {authUser?.fullName}
+        </p>
       </div>
     </div>
   );

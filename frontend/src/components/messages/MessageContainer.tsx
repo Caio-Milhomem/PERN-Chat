@@ -7,11 +7,11 @@ import Messages from "./Messages";
 const MessageContainer = () => {
   const { selectedConversation } = useConversation();
   return (
-    <div className="mb-2">
+    <div className="container">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
-        <div className="border border-2 rounded-4 p-2">
+        <div className="row border border-2 rounded-4 p-2 vh-100">
           <div className="mb-2">
             <span>To: {selectedConversation.fullName}</span>
           </div>

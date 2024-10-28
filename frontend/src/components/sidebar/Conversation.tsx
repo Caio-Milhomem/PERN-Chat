@@ -9,7 +9,7 @@ const Conversation = ({ conversation }: { conversation: ConversationType }) => {
   const isOnline = onlineUsers.includes(conversation.id);
   return (
     <div
-      className="row align-items-center p-1 rounded rounded-4 m-0"
+      className="row align-items-center p-1 rounded rounded-4 m-0 flex-nowrap"
       style={{
         maxWidth: "350px",
         backgroundColor: isSelected ? "hsl(262, 61%, 55%)" : "",
@@ -41,8 +41,7 @@ const Conversation = ({ conversation }: { conversation: ConversationType }) => {
         </div>
       </div>
       <div className="col">
-        <p className="mb-0">{conversation.fullName}</p>{" "}
-        {/* Remove bottom margin */}
+        <p className="mb-0 text-nowrap">{conversation.fullName}</p>
       </div>
     </div>
   );
