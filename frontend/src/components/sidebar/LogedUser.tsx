@@ -1,7 +1,7 @@
 import { useAuthContext } from "../../context/AuthContext";
 
 const LogedUser = () => {
-  const { authUser, isLoading } = useAuthContext();
+  const { authUser } = useAuthContext();
   const isOnline = true;
 
   return (
