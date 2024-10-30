@@ -10,12 +10,12 @@ const Message = ({ message }: { message: MessageType }) => {
   const img = fromMe ? authUser?.profilePic : selectedConversation?.profilePic;
 
   return (
-    <div className="container">
+    <div className="container-fluid m-1">
       {fromMe ? (
         <>
           <div className="row  d-flex  justify-content-end">
             <div
-              className="col-auto rounded rounded-4 me-1"
+              className="col-auto rounded rounded-4 me-1 align-content-center pb-1"
               style={{
                 backgroundColor: "hsl(262, 61%, 100%)",
                 maxWidth: "80%",
@@ -25,7 +25,7 @@ const Message = ({ message }: { message: MessageType }) => {
                 {message.body}
               </p>
               <div className="text-end text-dark">
-                <span>{"<>"}</span>
+                {/*<span>{"<>"}</span>*/}
               </div>
             </div>
             <div
@@ -56,7 +56,7 @@ const Message = ({ message }: { message: MessageType }) => {
               <img
                 src={img}
                 alt="Profile"
-                className={`rounded-circle text-end`}
+                className="rounded-circle text-end"
                 style={{ height: "40px" }}
               />
             </div>
@@ -64,9 +64,7 @@ const Message = ({ message }: { message: MessageType }) => {
               className="col-auto rounded rounded-4 ms-1 pb-1 align-content-center"
               style={{ backgroundColor: "hsl(0, 0%, 15%)", maxWidth: "80%" }}
             >
-              <p
-                className="text-light text-wrap text-break m-0"
-              >
+              <p className="text-light text-wrap text-break m-0">
                 {message.body}
               </p>
             </div>

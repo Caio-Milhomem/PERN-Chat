@@ -38,14 +38,8 @@ const MessageInput = () => {
   };
 
   return (
-    <div
-      className="row d-flex flex-column"
-      style={{ height: "45px", position: "relative" }}
-    >
-      <div
-        className="d-flex flex-column"
-        style={{ height: "45px", position: "relative" }}
-      >
+    <div className="row align-items-end" style={{ position: "relative" }}>
+      <div className="col" style={{ width: "calc(100% - 33rem)" }}>
         <textarea
           id="messageTextarea"
           className="form-control text-break overflow-scroll overflow-x-hidden customScrollbar"
@@ -54,17 +48,23 @@ const MessageInput = () => {
           onChange={handleInputChange}
           onBlur={handleBlur}
           style={{
-            position: "absolute",
-            bottom: 0,
-            maxHeight: "170px",
+            position: "fixed",
+            bottom: "1rem",
             height: `${textareaHeight}`,
             resize: "none",
+            maxHeight: "170px",
+            width: "calc(100% - 25em)",
+            maxWidth: "71vw",
           }}
         />
+      </div>
+      <div
+        className="col-auto"
+        style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
+      >
         <button
           type="button"
-          className="btn btn-primary align-self-end"
-          style={{ bottom: 0, position: "relative" }}
+          className="btn btn-primary"
           onClick={handleSubmit}
         >
           {loading ? (

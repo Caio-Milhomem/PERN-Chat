@@ -5,12 +5,7 @@ const LogedUser = () => {
   const isOnline = true;
 
   return (
-    <div
-      className="row align-items-center p-1 m-0 border-2 border-bottom flex-nowrap overflow-x-hidden"
-      style={{
-        maxWidth: "350px",
-      }}
-    >
+    <div className="row align-items-center p-1 m-0 border-2 border-bottom flex-nowrap overflow-x-hidden">
       <div className="col-auto">
         <div className="position-relative d-inline-block">
           {isOnline && (
@@ -36,7 +31,7 @@ const LogedUser = () => {
         </div>
       </div>
       <div className="col">
-        <p className="mb-0 text-nowrap" style={{ fontSize: "4vh" }}>
+        <p className="mb-0 text-nowrap" style={{ fontSize: "3vh" }}>
           {authUser?.fullName}
         </p>
       </div>

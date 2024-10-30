@@ -8,7 +8,7 @@ const Home = () => {
         <div className="col" style={{ maxWidth: "45vh" }}>
           <Sidebar />
         </div>
-        <div className="col w-75 min-vh-100">
+        <div className="col min-vh-100">
           <MessageContainer />
         </div>
       </div>

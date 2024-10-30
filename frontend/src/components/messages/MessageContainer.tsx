@@ -7,7 +7,7 @@ import Messages from "./Messages";
 const MessageContainer = () => {
   const { selectedConversation } = useConversation();
   return (
-    <div className="container">
+    <div className="container-fluid">
       {!selectedConversation ? (
         <NoChatSelected />
       ) : (
