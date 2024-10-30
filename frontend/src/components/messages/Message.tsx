@@ -62,11 +62,10 @@ const Message = ({ message }: { message: MessageType }) => {
             </div>
             <div
               className="col-auto rounded rounded-4 ms-1 pb-1 align-content-center"
-              style={{ backgroundColor: "hsl(0, 0%, 10%)" }}
+              style={{ backgroundColor: "hsl(0, 0%, 15%)", maxWidth: "80%" }}
             >
               <p
-                className="text-light text-wrap m-0"
-                style={{ maxWidth: "100px" }}
+                className="text-light text-wrap text-break m-0"
               >
                 {message.body}
               </p>
