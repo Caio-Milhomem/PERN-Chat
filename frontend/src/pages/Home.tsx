@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="container-fluid vh-100 ">
       <div className="row text-white vh-100">
-        <div className="col" style={{ maxWidth: "45vh" }}>
+        <div className="col" style={{ minWidth: "300px", maxWidth: "200px" }}>
           <Sidebar />
         </div>
         <div className="col min-vh-100">
@@ -15,5 +15,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

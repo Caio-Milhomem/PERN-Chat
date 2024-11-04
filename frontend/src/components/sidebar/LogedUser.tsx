@@ -31,7 +31,7 @@ const LogedUser = () => {
         </div>
       </div>
       <div className="col">
-        <p className="mb-0 text-nowrap" style={{ fontSize: "3vh" }}>
+        <p className="mb-0 text-nowrap" style={{ fontSize: "25px" }}>
           {authUser?.fullName}
         </p>
       </div>

@@ -53,8 +53,7 @@ const MessageInput = () => {
             height: `${textareaHeight}`,
             resize: "none",
             maxHeight: "170px",
-            width: "calc(100% - 25em)",
-            maxWidth: "71vw",
+            width: "calc(100% - 26em)",
           }}
         />
       </div>
