@@ -27,7 +27,10 @@ export default MessageContainer;
 const NoChatSelected = () => {
   const { authUser } = useAuthContext();
   return (
-    <div className="" style={{ height: "400px" }}>
+    <div
+      className="d-flex flex-column justify-content-end text-center"
+      style={{ height: "400px" }}
+    >
       <div>
         <p>Welcome {authUser?.fullName}</p>
         <p>Select a chat to start messaging</p>
